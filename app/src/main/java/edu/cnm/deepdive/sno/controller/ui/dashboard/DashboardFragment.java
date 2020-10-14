@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.sno.ui.dashboard;
+package edu.cnm.deepdive.sno.controller.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

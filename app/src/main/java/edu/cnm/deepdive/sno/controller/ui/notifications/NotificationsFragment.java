@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.sno.ui.notifications;
+package edu.cnm.deepdive.sno.controller.ui.notifications;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

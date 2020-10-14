@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.sno.ui.dashboard;
+package edu.cnm.deepdive.sno.controller.ui.dashboard;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

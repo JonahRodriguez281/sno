@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.sno.ui.home;
+package edu.cnm.deepdive.sno.controller.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
