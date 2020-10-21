@@ -69,7 +69,7 @@ Intended Functionality:
 
 ## Wireframe
 
-([![Sno Wireframe](img/sno-wireframe.png)](img/sno-wireframe.png))(pdf/sno-wireframe.pdf)
+[![![Sno Wireframe](img/sno-wireframe.png)](img/sno-wireframe.png)](pdf/sno-wireframe.pdf)
 
 ## Entity-relationship Diagram
 
