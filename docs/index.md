@@ -81,8 +81,8 @@ Intended Functionality:
 
 ## Wireframe
 
-[![Sno Wireframe](img/sno-wireframe.png)](pdf/sno-erd.pdf)
+[![Sno Wireframe](img/sno-wireframe.png)](sno-wireframe-description.md)
 
 ## Entity-relationship Diagram
 
-[![Sno ERD](img/sno-erd.png)]](pdf/sno-erd.pdf)
+[![Sno ERD](img/sno-erd.png)]](sno-erd-description.md)
