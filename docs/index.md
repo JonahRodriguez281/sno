@@ -79,9 +79,7 @@ Intended Functionality:
 
 * Save weather data for mountains to the server to see latest weather report prior to going offline.
 
-## Wireframe
-
-[![Sno Wireframe](img/sno-wireframe.png)](sno-wireframe-description.md)
+## [Wireframe](sno-wireframe-description.md)
 
 ## Entity-relationship Diagram
 
