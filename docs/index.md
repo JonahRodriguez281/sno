@@ -25,41 +25,51 @@ Intended Functionality:
 
 ## Functionality
 
-* Create a profile that has the users bio, riding skill level, their setup, etc.
+* Users can create a profile that has a list of the users favorite/home mountains as well as seeing various stats, such as distance traveled and total days logged. They can also choose to log their gear in the app to catalogue.
 
-* Select a mountain of those listed to see the mountains stats such as base depth, weather, and a trail map
+* Users can select a mountain of those listed to see the mountains stats such as the weather forecast and trail maps.
 
 ## Persistent data
 
 * User profile
+	
+    * Gear
+  
+    * Trip data (distance traveled, days logged, etc)
 
 * Mountain trail map if downloaded
     
 ## Device/external services
 
-* <a href="https://developer.android.com/training/location">GPS</a>
+* [GPS](https://developer.android.com/training/location)
 
-* <a href="https://developer.android.com/guide/topics/sensors/sensors_overview">Accelerometer</a>
+  * Used by the app to track trip data such as distance traveled and start and end time of skiing. The app can function without this service.
 
-* Real Time Weather
+* [Accelerometer](https://developer.android.com/guide/topics/sensors/sensors_overview)
 
-    * <a href="https://rapidapi.com/community/api/open-weather-map">OpenWeatherMap API</a>
+  * Used by the app to track a max speed while riding. The app can function without this service.
+
+* Real Time Weather:
+
+    * [OpenWeatherMap API](https://rapidapi.com/community/api/open-weather-map)
 	
-	* <a href="https://rapidapi.com/weatherbit/api/weather">Weatherbit API</a>
+	* [Weatherbit API](https://rapidapi.com/weatherbit/api/weather)
 	
-* Trail Map APIs
+	  * Used to track the weather data pertaining to various mountains across the United States. The app can function without this service.
 	
-	* <a href="https://rapidapi.com/trailapi/api/trailapi">Trail API</a>
+* Trail Map APIs:
+	
+	* [Trail API](https://rapidapi.com/trailapi/api/trailapi)
 
-	* <a href="https://www.powderproject.com/data">Ski Trail Map API</a>
+	* [Ski Trail Map API](https://www.powderproject.com/data)
+	
+	  * Used to track trails for various mountains across the United States. The app is functional without this service.
 
-* <a href="https://cloud.google.com/maps-platform/products">Google Maps</a>
+* [Google Maps](https://cloud.google.com/maps-platform/products)
+
+  * Potentially used to view the area surrounding the mountains in relation to the weather. The app is functional without the service.
 
 ## Stretch goals/possible enhancements 
-
-* Social media community wall where users can post and respond to each other, meet up, give tips, and talk about skiing/snowboarding.
-
-* Friend system to add friends and sent messages through the app.
 
 * Real time gps tracking that tracks the users vertical feet and can post their stats to a leaderboard. The real time tracking can see what trails the user has taken and compare it to the trail map.
 
@@ -67,10 +77,12 @@ Intended Functionality:
 
 * Have a section for tips and tricks--tutorials for tricks, general riding, fundamentals to improving.
 
+* Save weather data for mountains to the server to see latest weather report prior to going offline.
+
 ## Wireframe
 
-[![Sno Wireframe](img/sno-wireframe.png)]((img/sno-erd.png)(pdf/sno-erd.pdf))
+[![Sno Wireframe](img/sno-wireframe.png)](pdf/sno-erd.pdf)
 
 ## Entity-relationship Diagram
 
-[![Sno ERD](img/sno-erd.png)](img/sno-erd.png)(pdf/sno-erd.pdf)
+[![Sno ERD](img/sno-erd.png)]](pdf/sno-erd.pdf)
