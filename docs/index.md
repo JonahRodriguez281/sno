@@ -1,16 +1,27 @@
 ## Summary
 
-Sno is going to be a personal ski app where users who enjoy skiing or snowboadring can customize a profile that has the mountains they ride, gear they own, rider skill level, etc. There will be a section in the app where the user can check real time stats for the mountains of their choosing. Trail maps can also be found within the mountain page.
+Sno is going to be a personal ski app intended for users who enjoy skiing or snowboarding. Users of the app can customize a profile and add personal gear they own to a catalogue, track their distance traveled throughout the season, as well as logging the total days on the mountain. 
+A section in the app will have a myriad of mountains across the United States that they can choose from, adding to their favorites for quick access to check the weather, trail maps, and other information regarding the mountain and its weather.
+
+Intended Functionality:
+
+	* Log personal gear
+	
+	* Track distanced traveled while riding throughout the season
+	
+	* Track total days ridden in a season
+	
+	* Display a variety of mountains that contains a link to their respective weather stats and trail maps for what is available.
 
 ## Intended users
 
 * People who like to ski or snowboard
 
-    > As someone who goes skiing often, I want to be able to see local mountain weather and log my gear to keep track of my days.
+    > As someone who goes skiing often, I want to be able to log my gear and keep track of my distance traveled over my days throughtout the season.
 
 * People who are interested in the mountain stats and weather
 
-    > As someone who can go skiing at multiple mountains, I want to be able to easily see each mountains weather forecast, base depth, and status so I can easily decide if I should go skiing that day, go to a different mountain, or just cancel for that day.
+    > As someone who can go skiing at multiple mountains, I want to be able to easily see each mountains weather forecast and status so I can easily decide if I should go skiing that day, go to a different mountain, or just cancel altogether.
 
 ## Functionality
 
@@ -58,4 +69,8 @@ Sno is going to be a personal ski app where users who enjoy skiing or snowboadri
 
 ## Wireframe
 
-![Sno Wireframe](img/SnoWireframeRevised.png)
+[[![Sno Wireframe](img/sno-wireframe.png)](img/sno-wireframe.png)](pdf/sno-wireframe.pdf)
+
+## Entity-relationship Diagram
+
+[[![Sno ERD](img/sno-erd.png)](img/sno-erd.png)](pdf/sno-erd.pdf)
