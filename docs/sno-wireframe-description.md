@@ -1,6 +1,6 @@
 ## Wireframe
 
-[![Wireframe](img/sno-wireframe.png)](pdf/sno-wireframe.pdf)
+[![Wireframe](img/sno-wireframe-revised.png)](pdf/sno-wireframe.pdf)
 
 The Sno wireframe will have two main screens: One for the user profile, and the second screen is for seeing 
 the mountain stats and weather.
