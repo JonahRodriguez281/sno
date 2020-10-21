@@ -5,13 +5,13 @@ A section in the app will have a myriad of mountains across the United States th
 
 Intended Functionality:
 
-	* Log personal gear
+  * Log personal gear
 	
-	* Track distanced traveled while riding throughout the season
+  * Track distanced traveled while riding throughout the season
 	
-	* Track total days ridden in a season
+  * Track total days ridden in a season
 	
-	* Display a variety of mountains that contains a link to their respective weather stats and trail maps for what is available.
+  * Display a variety of mountains that contains a link to their respective weather stats and trail maps for what is available.
 
 ## Intended users
 
@@ -69,8 +69,8 @@ Intended Functionality:
 
 ## Wireframe
 
-[[![Sno Wireframe](img/sno-wireframe.png)](img/sno-wireframe.png)](pdf/sno-wireframe.pdf)
+([![Sno Wireframe](img/sno-wireframe.png)](img/sno-wireframe.png))(pdf/sno-wireframe.pdf)
 
 ## Entity-relationship Diagram
 
-[[![Sno ERD](img/sno-erd.png)](img/sno-erd.png)](pdf/sno-erd.pdf)
+[![Sno ERD](img/sno-erd.png)](img/sno-erd.png)(pdf/sno-erd.pdf)
