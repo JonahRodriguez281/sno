@@ -85,4 +85,4 @@ Intended Functionality:
 
 ## Entity-relationship Diagram
 
-[![Sno ERD](img/sno-erd.png)]](sno-erd-description.md)
+[![Sno ERD](img/sno-erd.png)](sno-erd-description.md)
