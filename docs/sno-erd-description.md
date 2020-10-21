@@ -22,4 +22,4 @@ The entity-relationship diagram incorporates the following entities:
   
   * FavoriteMountain 
   
-    * Joint entity for a many to many relationship between User & Mountain)
+    * Joint entity for a many to many relationship between User & Mountain) 
