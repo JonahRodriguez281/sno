@@ -5,9 +5,7 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.TypeConverter;
-import androidx.room.TypeConverters;
 
-@TypeConverters({TypeConverter.class})
 @Entity(
     indices = {
         @Index(value = "type"),
@@ -26,15 +24,54 @@ public class Gear {
   @ColumnInfo(name = "description")
   private String description;
 
-  private enum Type {
-    BOOTS, JACKET, PANTS, GOGGLES, HELMET, GLOVES, SNOWBOARD, SKIS, SOCKS, BASE_LAYER, MID_LAYER
+  @ColumnInfo(index = true)
+  private GearType gearType;
+
+  public long getId() {
+    return id;
   }
 
-  public static class TypeConverter {
+  public void setId(long id) {
+    this.id = id;
+  }
 
-    public static String typeToString(Type type) {
-      return type.toString();
+  public long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(long userId) {
+    this.userId = userId;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public GearType getGearType() {
+    return gearType;
+  }
+
+  public void setGearType(GearType gearType) {
+    this.gearType = gearType;
+  }
+
+  public enum GearType {
+    BOOTS, JACKET, PANTS, GOGGLES, HELMET, GLOVES, SNOWBOARD, SKIS, SOCKS, BASE_LAYER, MID_LAYER;
+
+    @TypeConverter
+    public static String typeToString(GearType type) {
+      return (type != null ? type.toString() : null);
+    }
+
+    @TypeConverter
+    public GearType stringToType(String name) {
+      return (name != null ? GearType.valueOf(name) : null);
     }
   }
+
 
 }

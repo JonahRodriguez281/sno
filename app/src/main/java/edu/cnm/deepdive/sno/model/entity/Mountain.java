@@ -26,4 +26,36 @@ public class Mountain {
 
   @ColumnInfo(name = "longitude")
   private double longitude;
+
+  public long getMountainId() {
+    return mountainId;
+  }
+
+  public void setMountainId(long mountainId) {
+    this.mountainId = mountainId;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public double getLatitude() {
+    return latitude;
+  }
+
+  public void setLatitude(double latitude) {
+    this.latitude = latitude;
+  }
+
+  public double getLongitude() {
+    return longitude;
+  }
+
+  public void setLongitude(double longitude) {
+    this.longitude = longitude;
+  }
 }

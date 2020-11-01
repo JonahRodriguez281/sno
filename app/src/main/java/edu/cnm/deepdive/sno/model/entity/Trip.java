@@ -12,6 +12,10 @@ import java.util.Date;
         @Index(value = "start_time"),
         @Index(value = "end_time"),
         @Index(value = "distance")
+    },
+    foreignKeys = {
+        @ForeignKey(entity = User.class, parentColumns = "user_id",
+            childColumns = "user_id", onDelete = ForeignKey.CASCADE)
     }
 )
 public class Trip {
@@ -20,8 +24,6 @@ public class Trip {
   @ColumnInfo(name = "trip_id")
   private long id;
 
-  @ForeignKey(entity = User.class, parentColumns = "user_id",
-      childColumns = "user_id", onDelete = ForeignKey.CASCADE)
   @ColumnInfo(name = "user_id")
   private long userId;
 
