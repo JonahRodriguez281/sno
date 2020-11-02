@@ -4,15 +4,17 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
 import androidx.room.TypeConverter;
 
 @Entity(
     indices = {
-        @Index(value = "type"),
+        @Index(value = "gear_type"),
         @Index(value = "description")
     })
 public class Gear {
 
+  @PrimaryKey
   @ColumnInfo(name = "gear_id")
   private long id;
 
@@ -24,7 +26,7 @@ public class Gear {
   @ColumnInfo(name = "description")
   private String description;
 
-  @ColumnInfo(index = true)
+  @ColumnInfo(name = "gear_type")
   private GearType gearType;
 
   public long getId() {
@@ -63,13 +65,13 @@ public class Gear {
     BOOTS, JACKET, PANTS, GOGGLES, HELMET, GLOVES, SNOWBOARD, SKIS, SOCKS, BASE_LAYER, MID_LAYER;
 
     @TypeConverter
-    public static String typeToString(GearType type) {
-      return (type != null ? type.toString() : null);
+    public static Integer typeToInt(GearType type) {
+      return (type != null ? type.ordinal() : null);
     }
 
     @TypeConverter
-    public GearType stringToType(String name) {
-      return (name != null ? GearType.valueOf(name) : null);
+    public static GearType intToType(Integer value) {
+      return (value != null ? GearType.values()[value] : null);
     }
   }
 

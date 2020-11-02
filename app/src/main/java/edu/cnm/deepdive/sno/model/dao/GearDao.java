@@ -1,8 +1,10 @@
 package edu.cnm.deepdive.sno.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.sno.model.entity.FavoriteMountain;
 import edu.cnm.deepdive.sno.model.entity.Gear;
@@ -39,4 +41,7 @@ public interface GearDao {
 
   @Delete
   Single<Integer> delete(Collection<Gear> gear);
+
+  @Query("SELECT * FROM Gear WHERE gear_id = :id ORDER BY gear_type DESC")
+  LiveData<List<Gear>> getGear(long id);
 }

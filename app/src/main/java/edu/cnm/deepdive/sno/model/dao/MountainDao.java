@@ -1,14 +1,17 @@
 package edu.cnm.deepdive.sno.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.sno.model.entity.Mountain;
 import edu.cnm.deepdive.sno.model.entity.User;
 import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
+import java.util.ListIterator;
 
 @Dao
 public interface MountainDao {
@@ -39,4 +42,7 @@ public interface MountainDao {
 
   @Delete
   Single<Integer> delete(Collection<Mountain> mountains);
+
+  @Query("SELECT * FROM mountain WHERE mountain_id = :id ORDER BY name DESC")
+  LiveData<List<Mountain>> select(long id);
 }

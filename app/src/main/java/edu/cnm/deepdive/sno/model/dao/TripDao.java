@@ -1,8 +1,10 @@
 package edu.cnm.deepdive.sno.model.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.sno.model.entity.FavoriteMountain;
 import edu.cnm.deepdive.sno.model.entity.Trip;
@@ -39,4 +41,7 @@ public interface TripDao {
 
   @Delete
   Single<Integer> delete(Collection<Trip> trips);
+
+  @Query("SELECT * FROM `Trip` ORDER BY start_time, end_time DESC")
+  LiveData<List<Trip>> selectDistance();
 }
