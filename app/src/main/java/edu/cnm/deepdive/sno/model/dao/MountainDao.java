@@ -43,6 +43,6 @@ public interface MountainDao {
   @Delete
   Single<Integer> delete(Collection<Mountain> mountains);
 
-  @Query("SELECT * FROM mountain WHERE mountain_id = :id ORDER BY name DESC")
-  LiveData<List<Mountain>> select(long id);
+  @Query("SELECT * FROM mountain WHERE mountain_id = :id")
+  LiveData<Mountain> select(long id);
 }

@@ -44,9 +44,10 @@ public interface FavoriteMountainDao {
   @Delete
   Single<Integer> delete(Collection<FavoriteMountain> favoriteMountains);
 
-  @Query("SELECT * FROM User WHERE user_id = :id")
-  LiveData<User> getUser(long id);
+  @Query("SELECT m.* FROM Mountain AS m INNER JOIN FavoriteMountain AS fm ON fm.mountain_id = m.mountain_id WHERE fm.user_id = :userId")
+  LiveData<List<Mountain>> getFavoriteMountains(long userId);
 
-  @Query("SELECT * FROM `Mountain` WHERE mountain_id = :id ORDER BY name DESC")
-  LiveData<List<Mountain>> getMountain(long id);
+  @Query("SELECT u.* FROM User AS u INNER JOIN FavoriteMountain AS fm ON fm.user_id = u.user_id WHERE fm.mountain_id = :mountainId")
+  LiveData<List<User>> getUsersForFavoriteMountain(long mountainId);
+
 }

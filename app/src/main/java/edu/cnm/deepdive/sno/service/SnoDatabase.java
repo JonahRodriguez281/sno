@@ -21,7 +21,7 @@ import java.util.Date;
 
 @Database(entities =
     {User.class, Trip.class, Mountain.class, FavoriteMountain.class, Gear.class},
-    version = 1, exportSchema = true)
+    version = 1)
 @TypeConverters({Gear.GearType.class, Converters.class})
 public abstract class SnoDatabase extends RoomDatabase {
 
