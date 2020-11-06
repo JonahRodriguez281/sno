@@ -42,9 +42,12 @@ public interface TripDao {
   @Delete
   Single<Integer> delete(Collection<Trip> trips);
 
-  @Query("SELECT * FROM `Trip` WHERE trip_id = :tripId ORDER BY distance")
-  LiveData<List<Trip>> selectDistance(long tripId);
+  @Query("SELECT * FROM `Trip` WHERE trip_id = :tripId")
+  LiveData<Trip> selectTrip(long tripId);
 
-  @Query("SELECT * FROM `Trip` WHERE trip_id = trip_id = :tripId ORDER BY start_time, end_time DESC")
-  LiveData<List<Trip>> getDaysLogged(long tripId);
+  @Query("SELECT * FROM Trip ORDER BY distance")
+  LiveData<List<Trip>> getAllTrips();
+
+  @Query("SELECT SUM(ROUND((end_time - start_time) / 86400000 + 0.499999999)) AS grand_total FROM `Trip` ")
+  LiveData<Integer> getDaysLogged();
 }

@@ -45,4 +45,7 @@ public interface MountainDao {
 
   @Query("SELECT * FROM mountain WHERE mountain_id = :id")
   LiveData<Mountain> selectMountain(long id);
+
+  @Query("SELECT * FROM mountain ORDER BY name")
+  LiveData<List<Mountain>> selectAllMountains();
 }

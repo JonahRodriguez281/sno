@@ -7,6 +7,7 @@ import edu.cnm.deepdive.sno.model.dao.MountainDao;
 import edu.cnm.deepdive.sno.model.entity.Mountain;
 import edu.cnm.deepdive.sno.model.entity.User;
 import io.reactivex.Completable;
+import io.reactivex.Single;
 import java.util.List;
 
 public class MountainRepository {
@@ -37,20 +38,22 @@ public class MountainRepository {
 
   private Completable delete(Mountain mountain) {
     return (
-        (mountain.getMountainId() == 0)
-            ? mountainDao.delete(mountain)
-            .map((id) -> {
-              mountain.setMountainId(id);
-              return mountain;
-            })
-            : mountainDao.update(mountain)
-                .map((numRecords) -> mountain)
-        )
-        .ignoreElement();
+        (mountain.getMountainId() != 0)
+            ? mountainDao.delete(mountain).ignoreElement()
+            : Completable.complete() // single task that returns a value 0 to the consumer
+        );
   }
 
   private LiveData<List<Mountain>> getFavorites(User user) {
     return favoriteMountainDao.getFavoriteMountains(user.getId());
+  }
+
+  private LiveData<Mountain> getMountain(long mountainId) {
+    return mountainDao.selectMountain(mountainId);
+  }
+
+  private LiveData<List<Mountain>> getAllMountains() {
+    return mountainDao.selectAllMountains();
   }
 
   //delete method, similar to save
