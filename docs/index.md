@@ -17,7 +17,7 @@ Intended Functionality:
 
 * People who like to ski or snowboard
 
-    > As someone who goes skiing often, I want to be able to log my gear and keep track of my distance traveled over my days throughtout the season.
+    > As someone who goes skiing often, I want to be able to log my gear and keep track of my distance traveled over my days throughtout the season so I can catalogue my ski season to see my results post-season.
 
 * People who are interested in the mountain stats and weather
 

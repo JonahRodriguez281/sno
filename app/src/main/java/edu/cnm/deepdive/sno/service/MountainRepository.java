@@ -28,11 +28,25 @@ public class MountainRepository {
             .map((id) -> {
               mountain.setMountainId(id);
               return mountain;
-            }) // now a single wrapped around mountain Single<Mountain>
+            }) // Single<Mountain>
             : mountainDao.update(mountain) // Single<Integer>
                 .map((numRecords) -> mountain) // Single<Mountain>
     )
         .ignoreElement(); // Changes Single to Completable
+  }
+
+  private Completable delete(Mountain mountain) {
+    return (
+        (mountain.getMountainId() == 0)
+            ? mountainDao.delete(mountain)
+            .map((id) -> {
+              mountain.setMountainId(id);
+              return mountain;
+            })
+            : mountainDao.update(mountain)
+                .map((numRecords) -> mountain)
+        )
+        .ignoreElement();
   }
 
   private LiveData<List<Mountain>> getFavorites(User user) {

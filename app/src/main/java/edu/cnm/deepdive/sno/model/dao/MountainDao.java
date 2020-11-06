@@ -44,5 +44,5 @@ public interface MountainDao {
   Single<Integer> delete(Collection<Mountain> mountains);
 
   @Query("SELECT * FROM mountain WHERE mountain_id = :id")
-  LiveData<Mountain> select(long id);
+  LiveData<Mountain> selectMountain(long id);
 }

@@ -28,6 +28,5 @@ public interface UserDao {
 
   @Query("SELECT * FROM User WHERE oauth_Key = :oauthKey")
   LiveData<User> getUserOauthKey(String oauthKey);
-  // query for user by id
-  // user by oauthKey
+
 }

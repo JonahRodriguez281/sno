@@ -42,6 +42,9 @@ public interface TripDao {
   @Delete
   Single<Integer> delete(Collection<Trip> trips);
 
-  @Query("SELECT * FROM `Trip` ORDER BY start_time, end_time DESC")
-  LiveData<List<Trip>> selectDistance();
+  @Query("SELECT * FROM `Trip` WHERE trip_id = :tripId ORDER BY distance")
+  LiveData<List<Trip>> selectDistance(long tripId);
+
+  @Query("SELECT * FROM `Trip` WHERE trip_id = trip_id = :tripId ORDER BY start_time, end_time DESC")
+  LiveData<List<Trip>> getDaysLogged(long tripId);
 }
