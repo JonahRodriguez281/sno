@@ -18,6 +18,10 @@ public class User {
   @ColumnInfo(name = "oauth_Key")
   private String oauthKey;
 
+  @NonNull
+  @ColumnInfo(name = "display_name")
+  private String displayName;
+
   public long getId() {
     return id;
   }
@@ -32,5 +36,14 @@ public class User {
 
   public void setOauthKey(String oauthKey) {
     this.oauthKey = oauthKey;
+  }
+
+  @NonNull
+  public String getDisplayName() {
+    return displayName;
+  }
+
+  public void setDisplayName(@NonNull String displayName) {
+    this.displayName = displayName;
   }
 }
