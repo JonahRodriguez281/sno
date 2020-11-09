@@ -56,6 +56,4 @@ public class MountainRepository {
     return mountainDao.selectAllMountains();
   }
 
-  //delete method, similar to save
-  //things youd expect UI to do for a user with a mountain
 }

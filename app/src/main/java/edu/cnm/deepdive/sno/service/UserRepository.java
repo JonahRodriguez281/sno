@@ -13,11 +13,13 @@ public class UserRepository {
   private final Context context;
   private final UserDao userDao;
   private final GoogleSignInService signInService;
+  private final SnoWebService webService;
 
   public UserRepository(Context context) {
     this.context = context;
     userDao = SnoDatabase.getInstance().getUserDao();
     signInService = GoogleSignInService.getInstance();
+    webService = SnoWebService.getInstance();
   }
 
   @SuppressWarnings("ConstantConditions")
@@ -38,6 +40,20 @@ public class UserRepository {
                 })
         )
         .subscribeOn(Schedulers.io());
+  }
+
+  public Single<User> getServerUserProfile() {
+    return signInService.refresh()
+        .observeOn(Schedulers.io())
+        .flatMap((account) -> webService.getProfile(getBearerToken(account.getIdToken()))
+            .flatMap((user) -> userDao.getUserOauthKey(account.getId())
+                .flatMap((localUser) -> {
+                  localUser.setDisplayName(user.getDisplayName());
+                  return userDao.update(localUser) // take the user and update it to the database
+                      .map((count) -> localUser);
+                })
+            )
+        );
   }
 
   private String getBearerToken(String idToken) {
