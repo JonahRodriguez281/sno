@@ -1,6 +1,6 @@
 ## Wireframe
 
-[![Wireframe](img/sno-wireframe.png)](pdf/sno-wireframe.pdf)
+[![Wireframe](../img/sno-wireframe.png)](../pdf/sno-wireframe.pdf)
 
 The Sno wireframe will have three main screens: One for the user profile, one for seeing the ski resort stats and weather, 
 and one for the accelerometer function.

@@ -81,6 +81,6 @@ Intended Functionality:
 
 * Save weather data for skiResorts to the server to see the latest weather report prior to going offline.
 
-## [Wireframe](sno-wireframe-description.md)
+## [Wireframe](descriptions/sno-wireframe-description.md)
 
-## [Entity-relationship Diagram](sno-erd-description.md)
+## [Entity-relationship Diagram](descriptions/sno-erd-description.md)

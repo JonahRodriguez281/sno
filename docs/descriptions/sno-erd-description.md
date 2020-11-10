@@ -1,6 +1,6 @@
 ## Entity-relationship diagram
 
-[![ERD](img/sno-erd.png)](pdf/sno-erd.pdf)
+[![ERD](../img/sno-erd.png)](../pdf/sno-erd.pdf)
 
 The entity-relationship diagram incorporates the following entities:
 
