@@ -1,27 +1,29 @@
 ## Summary
 
-Sno is going to be a personal ski app intended for users who enjoy skiing or snowboarding. Users of the app can customize a profile and add personal gear they own to a catalogue, track their distance traveled throughout the season, as well as logging the total days on the skiResort. 
-A section in the app will have a myriad of skiResorts across the United States that they can choose from, adding to their favorites for quick access to check the weather, trail maps, and other information regarding the skiResort and its weather.
+Sno is going to be a personal ski app intended for users who enjoy skiing or snowboarding. Users of the app can customize a profile and add personal gear they own to a catalogue, track their distance traveled throughout the season as well as their speed, and logging the total days ridden for a given season. 
+A section in the app will have a myriad of ski resorts across the United States that they can choose from, adding to their favorites for quick access to check the weather, trail maps, and other information regarding the ski resort and its weather.
 
 Intended Functionality:
 
   * Log personal gear
+  
+  * Track speed with the accelerometer
 	
   * Track distanced traveled while riding throughout the season
 	
   * Track total days ridden in a season
 	
-  * Display a variety of skiResorts that contains a link to their respective weather stats and trail maps for what is available.
+  * Display a variety of ski resorts that contain a link to their respective weather stats and trail maps.
 
 ## Intended users
 
 * People who like to ski or snowboard
 
-    > As someone who goes skiing often, I want to be able to log my gear and keep track of my distance traveled over my days throughtout the season so I can catalogue my ski season to see my results post-season.
+    > As someone who goes skiing often, I want to be able to log my gear and keep track of my distance traveled over my days throughout the season, so I can catalogue my ski season to see my results post-season.
 
 * People who are interested in the skiResort stats and weather
 
-    > As someone who can go skiing at multiple skiResorts, I want to be able to easily see each skiResorts weather forecast and status so I can easily decide if I should go skiing that day, go to a different skiResort, or just cancel altogether.
+    > As someone who can go skiing at multiple skiResorts, I want to be able to easily see each skiResorts weather forecast and status, so I can easily decide if I should go skiing that day, go to a different skiResort, or just cancel altogether.
 
 ## Functionality
 
@@ -77,7 +79,7 @@ Intended Functionality:
 
 * Have a section for tips and tricks--tutorials for tricks, general riding, fundamentals to improving.
 
-* Save weather data for skiResorts to the server to see latest weather report prior to going offline.
+* Save weather data for skiResorts to the server to see the latest weather report prior to going offline.
 
 ## [Wireframe](sno-wireframe-description.md)
 

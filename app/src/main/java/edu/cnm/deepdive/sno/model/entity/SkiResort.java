@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.sno.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
@@ -18,6 +19,7 @@ public class SkiResort {
   @ColumnInfo(name = "ski_resort_id")
   private long skiResortId;
 
+  @NonNull
   @ColumnInfo(name = "name")
   private String name;
 
@@ -35,11 +37,12 @@ public class SkiResort {
     this.skiResortId = skiResortId;
   }
 
+  @NonNull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@NonNull String name) {
     this.name = name;
   }
 
