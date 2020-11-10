@@ -14,7 +14,7 @@ public class SnoApplication extends Application {
     Stetho.initializeWithDefaults(this);
     GoogleSignInService.setContext(this);
     SnoDatabase.setContext(this);
-    SnoDatabase.getInstance().getMountainDao().delete()
+    SnoDatabase.getInstance().getSkiResortDao().delete()
         .subscribeOn(Schedulers.io())
         .subscribe();
   }

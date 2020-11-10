@@ -17,8 +17,8 @@ public class SkiResortRepository {
 
   public SkiResortRepository(Context context) {
     this.context = context;
-    skiResortDao = SnoDatabase.getInstance().getMountainDao();
-    favoriteSkiResortDao = SnoDatabase.getInstance().getFavoriteMountainDao();
+    skiResortDao = SnoDatabase.getInstance().getSkiResortDao();
+    favoriteSkiResortDao = SnoDatabase.getInstance().getFavoriteSkiResortDao();
   }
 
   private Completable save(SkiResort skiResort) {
@@ -44,14 +44,14 @@ public class SkiResortRepository {
   }
 
   private LiveData<List<SkiResort>> getFavorites(User user) {
-    return favoriteSkiResortDao.getFavoriteMountains(user.getId());
+    return favoriteSkiResortDao.getFavoriteSkiResorts(user.getId());
   }
 
-  private LiveData<SkiResort> getMountain(long mountainId) {
-    return skiResortDao.selectSkiResort(mountainId);
+  private LiveData<SkiResort> getSkiResort(long skiResortId) {
+    return skiResortDao.selectSkiResort(skiResortId);
   }
 
-  private LiveData<List<SkiResort>> getAllMountains() {
+  private LiveData<List<SkiResort>> getAllSkiResorts() {
     return skiResortDao.selectAllSkiResorts();
   }
 

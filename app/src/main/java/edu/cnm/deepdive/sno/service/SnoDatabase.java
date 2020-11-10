@@ -41,9 +41,9 @@ public abstract class SnoDatabase extends RoomDatabase {
 
   public abstract TripDao getTripDao();
 
-  public abstract SkiResortDao getMountainDao();
+  public abstract SkiResortDao getSkiResortDao();
 
-  public abstract FavoriteSkiResortDao getFavoriteMountainDao();
+  public abstract FavoriteSkiResortDao getFavoriteSkiResortDao();
 
   public abstract GearDao getGearDao();
 

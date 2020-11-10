@@ -44,9 +44,9 @@ public interface FavoriteSkiResortDao {
   Single<Integer> delete(Collection<FavoriteSkiResort> favoriteSkiResorts);
 
   @Query("SELECT m.* FROM SkiResort AS m INNER JOIN FavoriteSkiResort AS fm ON fm.ski_resort_id = m.ski_resort_id WHERE fm.user_id = :userId")
-  LiveData<List<SkiResort>> getFavoriteMountains(long userId);
+  LiveData<List<SkiResort>> getFavoriteSkiResorts(long userId);
 
   @Query("SELECT u.* FROM User AS u INNER JOIN FavoriteSkiResort AS fm ON fm.user_id = u.user_id WHERE fm.ski_resort_id = :skiResortId")
-  LiveData<List<User>> getUsersForFavoriteMountain(long skiResortId);
+  LiveData<List<User>> getUsersForFavoriteSkiResorts(long skiResortId);
 
 }
