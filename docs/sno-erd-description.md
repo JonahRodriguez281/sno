@@ -10,16 +10,16 @@ The entity-relationship diagram incorporates the following entities:
   
   * User
     
-    * Shares multiple many optional relationships with Trip, FavoriteMountain, and Gear
+    * Shares multiple many optional relationships with Trip, FavoriteSkiResort, and Gear
   
   * Gear
   
     * Shares a many optional to one mandatory relationship with User
   
-  * Mountain
+  * SkiResort
   
-    * Shares a many optional to one mandatory relationship with FavoriteMountain
+    * Shares a many optional to one mandatory relationship with FavoriteSkiResort
   
   * FavoriteMountain 
   
-    * Joint entity for a many to many relationship between User & Mountain) 
+    * Joint entity for a many to many relationship between User & SkiResort) 
