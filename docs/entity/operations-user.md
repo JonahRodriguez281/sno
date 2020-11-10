@@ -35,11 +35,11 @@ For any queries (i.e. selecting from the database) that you think you will need 
 
 Copy and paste the section below as many times as necessary, for all of the queries you currently anticipate implementing for this entity.
 
-### Query: Favorite mountains
+### Query: Favorite skiResorts
 
 Purpose
 
-: Show the user the list of their favorite mountains
+: Show the user the list of their favorite skiResorts
 
 Cardinality/modality
 

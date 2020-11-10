@@ -6,21 +6,21 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
-import edu.cnm.deepdive.sno.model.dao.FavoriteMountainDao;
+import edu.cnm.deepdive.sno.model.dao.FavoriteSkiResortDao;
 import edu.cnm.deepdive.sno.model.dao.GearDao;
-import edu.cnm.deepdive.sno.model.dao.MountainDao;
+import edu.cnm.deepdive.sno.model.dao.SkiResortDao;
 import edu.cnm.deepdive.sno.model.dao.TripDao;
 import edu.cnm.deepdive.sno.model.dao.UserDao;
-import edu.cnm.deepdive.sno.model.entity.FavoriteMountain;
+import edu.cnm.deepdive.sno.model.entity.FavoriteSkiResort;
 import edu.cnm.deepdive.sno.model.entity.Gear;
-import edu.cnm.deepdive.sno.model.entity.Mountain;
+import edu.cnm.deepdive.sno.model.entity.SkiResort;
 import edu.cnm.deepdive.sno.model.entity.Trip;
 import edu.cnm.deepdive.sno.model.entity.User;
 import edu.cnm.deepdive.sno.service.SnoDatabase.Converters;
 import java.util.Date;
 
 @Database(entities =
-    {User.class, Trip.class, Mountain.class, FavoriteMountain.class, Gear.class},
+    {User.class, Trip.class, SkiResort.class, FavoriteSkiResort.class, Gear.class},
     version = 1)
 @TypeConverters({Gear.GearType.class, Converters.class})
 public abstract class SnoDatabase extends RoomDatabase {
@@ -41,9 +41,9 @@ public abstract class SnoDatabase extends RoomDatabase {
 
   public abstract TripDao getTripDao();
 
-  public abstract MountainDao getMountainDao();
+  public abstract SkiResortDao getMountainDao();
 
-  public abstract FavoriteMountainDao getFavoriteMountainDao();
+  public abstract FavoriteSkiResortDao getFavoriteMountainDao();
 
   public abstract GearDao getGearDao();
 

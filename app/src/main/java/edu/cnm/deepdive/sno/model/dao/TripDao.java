@@ -6,7 +6,6 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-import edu.cnm.deepdive.sno.model.entity.FavoriteMountain;
 import edu.cnm.deepdive.sno.model.entity.Trip;
 import io.reactivex.Single;
 import java.util.Collection;

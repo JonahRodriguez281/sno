@@ -12,11 +12,11 @@ import androidx.room.PrimaryKey;
         @Index(value = "longitude")
     }
 )
-public class Mountain {
+public class SkiResort {
 
   @PrimaryKey(autoGenerate = true)
-  @ColumnInfo(name = "mountain_id")
-  private long mountainId;
+  @ColumnInfo(name = "ski_resort_id")
+  private long skiResortId;
 
   @ColumnInfo(name = "name")
   private String name;
@@ -27,12 +27,12 @@ public class Mountain {
   @ColumnInfo(name = "longitude")
   private double longitude;
 
-  public long getMountainId() {
-    return mountainId;
+  public long getSkiResortId() {
+    return skiResortId;
   }
 
-  public void setMountainId(long mountainId) {
-    this.mountainId = mountainId;
+  public void setSkiResortId(long skiResortId) {
+    this.skiResortId = skiResortId;
   }
 
   public String getName() {

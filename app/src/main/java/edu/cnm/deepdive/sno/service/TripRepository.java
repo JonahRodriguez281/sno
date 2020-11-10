@@ -3,7 +3,6 @@ package edu.cnm.deepdive.sno.service;
 import android.content.Context;
 import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.sno.model.dao.TripDao;
-import edu.cnm.deepdive.sno.model.entity.Mountain;
 import edu.cnm.deepdive.sno.model.entity.Trip;
 import io.reactivex.Completable;
 import java.util.List;

@@ -1,6 +1,6 @@
 # Entity Operations Checklist
 
-## Entity name: Mountain
+## Entity name: SkiResort
 
 ## Operations
 
@@ -35,11 +35,11 @@ For any queries (i.e. selecting from the database) that you think you will need 
 
 Copy and paste the section below as many times as necessary, for all of the queries you currently anticipate implementing for this entity.
 
-### Query: Display mountain names
+### Query: Display skiResort names
 
 Purpose
 
-: A list of mountain names will need to be called to allow the user to select from a variety of mountain names to find more information.
+: A list of skiResort names will need to be called to allow the user to select from a variety of skiResort names to find more information.
 
 Cardinality/modality
 
