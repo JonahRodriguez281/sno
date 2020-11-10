@@ -36,6 +36,9 @@ public class Trip {
   @ColumnInfo(name = "distance")
   private float distance;
 
+  @ColumnInfo(name = "max_speed")
+  private int maxSpeed;
+
   public long getId() {
     return id;
   }
@@ -74,5 +77,13 @@ public class Trip {
 
   public void setDistance(float distance) {
     this.distance = distance;
+  }
+
+  public int getMaxSpeed() {
+    return maxSpeed;
+  }
+
+  public void setMaxSpeed(int maxSpeed) {
+    this.maxSpeed = maxSpeed;
   }
 }
