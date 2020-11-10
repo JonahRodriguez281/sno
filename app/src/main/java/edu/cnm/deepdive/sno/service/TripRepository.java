@@ -51,7 +51,7 @@ public class TripRepository {
     return tripDao.getDaysLogged();
   }
 
-  private LiveData<Integer> getMaxSpeed() {
+  private LiveData<Trip> getMaxSpeed() {
     return tripDao.getMaxSpeed();
   }
 }

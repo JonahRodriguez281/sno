@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "8694f4af99327177af64c23cfe47e4b6",
+    "identityHash": "443290fb2cf2851ae0d278d95abbcbfb",
     "entities": [
       {
         "tableName": "User",
@@ -47,7 +47,7 @@
       },
       {
         "tableName": "Trip",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`trip_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `start_time` INTEGER, `end_time` INTEGER, `distance` REAL NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`trip_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `start_time` INTEGER, `end_time` INTEGER, `distance` REAL NOT NULL, `max_speed` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -77,6 +77,12 @@
             "fieldPath": "distance",
             "columnName": "distance",
             "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "maxSpeed",
+            "columnName": "max_speed",
+            "affinity": "INTEGER",
             "notNull": true
           }
         ],
@@ -135,12 +141,12 @@
         ]
       },
       {
-        "tableName": "Mountain",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mountain_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL)",
+        "tableName": "SkiResort",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ski_resort_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL)",
         "fields": [
           {
-            "fieldPath": "mountainId",
-            "columnName": "mountain_id",
+            "fieldPath": "skiResortId",
+            "columnName": "ski_resort_id",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -148,7 +154,7 @@
             "fieldPath": "name",
             "columnName": "name",
             "affinity": "TEXT",
-            "notNull": false
+            "notNull": true
           },
           {
             "fieldPath": "latitude",
@@ -165,41 +171,41 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "mountain_id"
+            "ski_resort_id"
           ],
           "autoGenerate": true
         },
         "indices": [
           {
-            "name": "index_Mountain_name",
+            "name": "index_SkiResort_name",
             "unique": true,
             "columnNames": [
               "name"
             ],
-            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_Mountain_name` ON `${TABLE_NAME}` (`name`)"
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_SkiResort_name` ON `${TABLE_NAME}` (`name`)"
           },
           {
-            "name": "index_Mountain_latitude",
+            "name": "index_SkiResort_latitude",
             "unique": false,
             "columnNames": [
               "latitude"
             ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Mountain_latitude` ON `${TABLE_NAME}` (`latitude`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_SkiResort_latitude` ON `${TABLE_NAME}` (`latitude`)"
           },
           {
-            "name": "index_Mountain_longitude",
+            "name": "index_SkiResort_longitude",
             "unique": false,
             "columnNames": [
               "longitude"
             ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_Mountain_longitude` ON `${TABLE_NAME}` (`longitude`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_SkiResort_longitude` ON `${TABLE_NAME}` (`longitude`)"
           }
         ],
         "foreignKeys": []
       },
       {
-        "tableName": "FavoriteMountain",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER NOT NULL, `mountain_id` INTEGER NOT NULL, PRIMARY KEY(`user_id`, `mountain_id`), FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`mountain_id`) REFERENCES `Mountain`(`mountain_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "tableName": "FavoriteSkiResort",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`user_id` INTEGER NOT NULL, `ski_resort_id` INTEGER NOT NULL, PRIMARY KEY(`user_id`, `ski_resort_id`), FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`ski_resort_id`) REFERENCES `SkiResort`(`ski_resort_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "userId",
@@ -208,8 +214,8 @@
             "notNull": true
           },
           {
-            "fieldPath": "mountainId",
-            "columnName": "mountain_id",
+            "fieldPath": "skiResortId",
+            "columnName": "ski_resort_id",
             "affinity": "INTEGER",
             "notNull": true
           }
@@ -217,26 +223,26 @@
         "primaryKey": {
           "columnNames": [
             "user_id",
-            "mountain_id"
+            "ski_resort_id"
           ],
           "autoGenerate": false
         },
         "indices": [
           {
-            "name": "index_FavoriteMountain_user_id",
+            "name": "index_FavoriteSkiResort_user_id",
             "unique": false,
             "columnNames": [
               "user_id"
             ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_FavoriteMountain_user_id` ON `${TABLE_NAME}` (`user_id`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_FavoriteSkiResort_user_id` ON `${TABLE_NAME}` (`user_id`)"
           },
           {
-            "name": "index_FavoriteMountain_mountain_id",
+            "name": "index_FavoriteSkiResort_ski_resort_id",
             "unique": false,
             "columnNames": [
-              "mountain_id"
+              "ski_resort_id"
             ],
-            "createSql": "CREATE INDEX IF NOT EXISTS `index_FavoriteMountain_mountain_id` ON `${TABLE_NAME}` (`mountain_id`)"
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_FavoriteSkiResort_ski_resort_id` ON `${TABLE_NAME}` (`ski_resort_id`)"
           }
         ],
         "foreignKeys": [
@@ -252,14 +258,14 @@
             ]
           },
           {
-            "table": "Mountain",
+            "table": "SkiResort",
             "onDelete": "CASCADE",
             "onUpdate": "NO ACTION",
             "columns": [
-              "mountain_id"
+              "ski_resort_id"
             ],
             "referencedColumns": [
-              "mountain_id"
+              "ski_resort_id"
             ]
           }
         ]
@@ -323,7 +329,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8694f4af99327177af64c23cfe47e4b6')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '443290fb2cf2851ae0d278d95abbcbfb')"
     ]
   }
 }

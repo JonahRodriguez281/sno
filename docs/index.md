@@ -84,3 +84,5 @@ Intended Functionality:
 ## [Wireframe](descriptions/sno-wireframe-description.md)
 
 ## [Entity-relationship Diagram](descriptions/sno-erd-description.md)
+
+## [DDL for Sno](ddl.md)

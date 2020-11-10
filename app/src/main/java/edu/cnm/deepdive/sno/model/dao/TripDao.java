@@ -51,5 +51,5 @@ public interface TripDao {
   LiveData<Integer> getDaysLogged();
 
   @Query("SELECT * FROM Trip ORDER BY max_speed")
-  LiveData<Integer> getMaxSpeed();
+  LiveData<Trip> getMaxSpeed();
 }
