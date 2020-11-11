@@ -21,15 +21,15 @@ Intended Functionality:
 
     > As someone who goes skiing often, I want to be able to log my gear and keep track of my distance traveled over my days throughout the season, so I can catalogue my ski season to see my results post-season.
 
-* People who are interested in the skiResort stats and weather
+* People who are interested in the ski resort stats and weather
 
-    > As someone who can go skiing at multiple skiResorts, I want to be able to easily see each skiResorts weather forecast and status, so I can easily decide if I should go skiing that day, go to a different skiResort, or just cancel altogether.
+    > As someone who can go skiing at multiple ski resorts, I want to be able to easily see each ski resorts weather forecast and status, so I can easily decide if I should go skiing that day, go to a different ski resort, or just cancel altogether.
 
 ## Functionality
 
-* Users can create a profile that has a list of the users favorite/home skiResorts as well as seeing various stats, such as distance traveled and total days logged. They can also choose to log their gear in the app to catalogue.
+* Users can create a profile that has a list of the users favorite/home ski resorts as well as seeing various stats, such as distance traveled and total days logged. They can also choose to log their gear in the app to catalogue.
 
-* Users can select a skiResort of those listed to see the skiResorts stats such as the weather forecast and trail maps.
+* Users can select a ski resort of those listed to see the ski resorts stats such as the weather forecast and trail maps.
 
 ## Persistent data
 
@@ -57,7 +57,7 @@ Intended Functionality:
 	
 	* [Weatherbit API](https://rapidapi.com/weatherbit/api/weather)
 	
-	  * Used to track the weather data pertaining to various skiResorts across the United States. The app can function without this service.
+	  * Used to track the weather data pertaining to various ski resorts across the United States. The app can function without this service.
 	
 * Trail Map APIs:
 	
@@ -65,24 +65,24 @@ Intended Functionality:
 
 	* [Ski Trail Map API](https://www.powderproject.com/data)
 	
-	  * Used to track trails for various skiResorts across the United States. The app is functional without this service.
+	  * Used to track trails for various ski resorts across the United States. The app is functional without this service.
 
 * [Google Maps](https://cloud.google.com/maps-platform/products)
 
-  * Potentially used to view the area surrounding the skiResorts in relation to the weather. The app is functional without the service.
+  * Potentially used to view the area surrounding the ski resorts in relation to the weather. The app is functional without the service.
 
 ## Stretch goals/possible enhancements 
 
 * Real time gps tracking that tracks the users vertical feet and can post their stats to a leaderboard. The real time tracking can see what trails the user has taken and compare it to the trail map.
 
-* Have all skiResort stats to every skiResort in the USA, or even globally, and be able to see all necessary stats for that skiResort.
+* Have all ski resort stats to every ski resort in the USA, or even globally, and be able to see all necessary stats for that ski resort.
 
 * Have a section for tips and tricks--tutorials for tricks, general riding, fundamentals to improving.
 
-* Save weather data for skiResorts to the server to see the latest weather report prior to going offline.
+* Save weather data for ski resorts to the server to see the latest weather report prior to going offline.
 
 ## [Wireframe](descriptions/sno-wireframe-description.md)
 
 ## [Entity-relationship Diagram](descriptions/sno-erd-description.md)
 
-## [DDL for Sno](ddl.md)
+## [DDL](ddl.md)
