@@ -3,4 +3,10 @@
   <dimen name="activity_horizontal_margin">16dp</dimen>
   <dimen name="activity_vertical_margin">16dp</dimen>
   <dimen name="half_margin">8dp</dimen>
+  <dimen name="accelerometer_number">72sp</dimen>
+  <dimen name="title">36sp</dimen>
+  <dimen name="subtitle">18sp</dimen>
+  <dimen name="accelerometer_mph">24sp</dimen>
+  <dimen name="top_speed_number_format">30sp</dimen>
+  <dimen name="list_item_height">72dp</dimen>
 </resources>

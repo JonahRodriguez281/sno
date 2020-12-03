@@ -11,6 +11,9 @@ import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Data access object class to access data from the {@link Trip} entity.
+ */
 @Dao
 public interface TripDao {
 
@@ -50,6 +53,9 @@ public interface TripDao {
   @Query("SELECT SUM(ROUND((end_time - start_time) / 86400000 + 0.499999999)) AS grand_total FROM `Trip` ")
   LiveData<Integer> getDaysLogged();
 
-  @Query("SELECT * FROM Trip ORDER BY max_speed")
-  LiveData<Trip> getMaxSpeed();
+  @Query("SELECT max_speed FROM Trip ORDER BY max_speed DESC")
+  LiveData<Integer> getMaxSpeed();
+
+  @Query("SELECT distance FROM TRIP")
+  LiveData<Float> getDistance();
 }

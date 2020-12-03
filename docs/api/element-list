@@ -1,0 +1,9 @@
+edu.cnm.deepdive.sno
+edu.cnm.deepdive.sno.adapter
+edu.cnm.deepdive.sno.controller
+edu.cnm.deepdive.sno.databinding
+edu.cnm.deepdive.sno.model.dao
+edu.cnm.deepdive.sno.model.dto
+edu.cnm.deepdive.sno.model.entity
+edu.cnm.deepdive.sno.service
+edu.cnm.deepdive.sno.viewmodel

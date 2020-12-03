@@ -7,4 +7,25 @@
     <item name="colorAccent">@color/colorAccent</item>
   </style>
 
+  <style name="Mph">
+    <item name="android:textSize">@dimen/accelerometer_mph</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="Title">
+    <item name="android:textSize">@dimen/title</item>
+    <item name="android:textAlignment">center</item>
+  </style>
+
+  <style name="Subtitle">
+    <item name="android:textSize">@dimen/subtitle</item>
+    <item name="android:textAlignment">center</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+
 </resources>

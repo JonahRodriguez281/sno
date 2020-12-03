@@ -4,10 +4,10 @@
 
   <application
     android:allowBackup="false"
-    android:icon="@mipmap/ic_launcher"
+    android:icon="@mipmap/ic_sno_launcher"
     android:label="@string/app_name"
     android:name=".SnoApplication"
-    android:roundIcon="@mipmap/ic_launcher_round"
+    android:roundIcon="@mipmap/ic_sno_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
     <activity android:name=".controller.LoginActivity">
@@ -17,7 +17,7 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity android:name=".controller.MainActivity">
+    <activity android:name=".controller.NavigationActivity">
     </activity>
   </application>
 

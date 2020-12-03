@@ -12,6 +12,10 @@ import com.google.android.gms.tasks.Task;
 import edu.cnm.deepdive.sno.BuildConfig;
 import io.reactivex.Single;
 
+/**
+ * Creates the Google Sign In for the application. Allowing the user to sign-in to the app using
+ * their Google credentials.
+ */
 public class GoogleSignInService {
 
   private static Application context;
@@ -29,18 +33,31 @@ public class GoogleSignInService {
     client = GoogleSignIn.getClient(context, options);
   }
 
+  /**
+   * Sets the contex for the Google Sign In Service.
+   * @param context Application context
+   */
   public static void setContext(Application context) {
     GoogleSignInService.context = context;
   }
 
+  /**
+   * Returns an instance of Google Sign In Service
+   */
   public static GoogleSignInService getInstance() {
     return InstanceHolder.INSTANCE;
   }
 
+  /**
+   * Returns the Google account of a user.
+   */
   public GoogleSignInAccount getAccount() {
     return account;
   }
 
+  /**
+   * Background refresh of the application.
+   */
   public Single<GoogleSignInAccount> refresh() {
     return Single.create((emitter) ->
         client.silentSignIn()
@@ -51,12 +68,22 @@ public class GoogleSignInService {
 
   }
 
+  /**
+   * Starts the sign in.
+   * @param activity
+   * @param requestCode
+   */
   public void startSignIn(Activity activity, int requestCode) {
     account = null;
     Intent intent = client.getSignInIntent();
     activity.startActivityForResult(intent, requestCode);
   }
 
+  /**
+   * Completes the sign in.
+   * @param data Intent data for the task
+   * @return A task for Google Sign In
+   */
   public Task<GoogleSignInAccount> completeSignIn(Intent data) {
     Task<GoogleSignInAccount> task = null;
     try {
@@ -68,11 +95,18 @@ public class GoogleSignInService {
     return task;
   }
 
+  /**
+   * Signs out of Google in the application
+   */
   public Task<Void> signOut() {
     return client.signOut()
         .addOnCompleteListener((ignored) -> setAccount(null));
   }
 
+  /**
+   * Sets the account to a user.
+   * @param account Google Sign In account
+   */
   private void setAccount(GoogleSignInAccount account) {
     this.account = account;
 //    if (account != null) {

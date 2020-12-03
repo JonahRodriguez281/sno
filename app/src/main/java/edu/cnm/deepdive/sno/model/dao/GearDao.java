@@ -12,6 +12,9 @@ import io.reactivex.Single;
 import java.util.Collection;
 import java.util.List;
 
+/**
+ * Data access object class to access data from the {@link Gear} entity.
+ */
 @Dao
 public interface GearDao {
 

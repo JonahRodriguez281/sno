@@ -2,17 +2,20 @@ package edu.cnm.deepdive.sno.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import edu.cnm.deepdive.sno.R;
 import edu.cnm.deepdive.sno.databinding.ActivityLoginBinding;
 import edu.cnm.deepdive.sno.service.GoogleSignInService;
 import edu.cnm.deepdive.sno.service.UserRepository;
 
+/**
+ * Activity to handle logging into the app through Google Sign In.
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private static final int LOGIN_REQUEST_CODE = 1000;
@@ -57,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         userRepository.createUser(account)
             .subscribe(
                 (user) -> {
-                    Intent intent = new Intent(this, MainActivity.class)
+                    Intent intent = new Intent(this, NavigationActivity.class)
                         //clear other activities off the stack and create new instance of activity im switching to
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK); // || is only logical operations
                     startActivity(intent);

@@ -7,6 +7,9 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
+/**
+ * Entity class to store relevant information regarding a trip to a ski resort in the database.
+ */
 @Entity(
     indices = {
         @Index(value = "start_time"),
@@ -25,7 +28,7 @@ public class Trip {
   private long id;
 
   @ColumnInfo(name = "user_id", index = true)
-  private long userId;
+  private Long userId;
 
   @ColumnInfo(name = "start_time")
   private Date startTime;
@@ -33,57 +36,99 @@ public class Trip {
   @ColumnInfo(name = "end_time")
   private Date endTime;
 
-  @ColumnInfo(name = "distance")
   private float distance;
 
   @ColumnInfo(name = "max_speed")
   private int maxSpeed;
 
+  /**
+   * Returns the id of a trip.
+   */
   public long getId() {
     return id;
   }
 
+  /**
+   * Sets the id of a trip.
+   * @param id A trip id
+   */
   public void setId(long id) {
     this.id = id;
   }
 
-  public long getUserId() {
+  /**
+   * Returns the id of a {@link User}.
+   */
+  public Long getUserId() {
     return userId;
   }
 
-  public void setUserId(long userId) {
+  /**
+   * Sets the id of a {@link User}.
+   * @param userId A user id
+   */
+  public void setUserId(Long userId) {
     this.userId = userId;
   }
 
+  /**
+   * Returns the start time of a trip.
+   */
   public Date getStartTime() {
     return startTime;
   }
 
+  /**
+   * Sets the start time of a trip.
+   * @param startTime The start time of a trip
+   */
   public void setStartTime(Date startTime) {
     this.startTime = startTime;
   }
 
+  /**
+   * Returns the end time of a trip.
+   */
   public Date getEndTime() {
     return endTime;
   }
 
+  /**
+   * Sets the end time of a trip.
+   * @param endTime The end time of a trip
+   */
   public void setEndTime(Date endTime) {
     this.endTime = endTime;
   }
 
+  /**
+   * Returns the distance of a trip.
+   */
   public float getDistance() {
     return distance;
   }
 
+  /**
+   * Sets the distance of a trip.
+   * @param distance The distance traveled on a trip
+   */
   public void setDistance(float distance) {
     this.distance = distance;
   }
 
+  /**
+   * Returns the highest speed recorded in the database.
+   */
   public int getMaxSpeed() {
     return maxSpeed;
   }
 
+  /**
+   * Sets the highest speed recorded in the database.
+   * @param maxSpeed Top speed recorded
+   */
   public void setMaxSpeed(int maxSpeed) {
     this.maxSpeed = maxSpeed;
   }
+
 }

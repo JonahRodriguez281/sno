@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "443290fb2cf2851ae0d278d95abbcbfb",
+    "identityHash": "72f83d5da0afd948d26c79a47a5b4fdf",
     "entities": [
       {
         "tableName": "User",
@@ -47,7 +47,7 @@
       },
       {
         "tableName": "Trip",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`trip_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER NOT NULL, `start_time` INTEGER, `end_time` INTEGER, `distance` REAL NOT NULL, `max_speed` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`trip_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `user_id` INTEGER, `start_time` INTEGER, `end_time` INTEGER, `distance` REAL NOT NULL, `max_speed` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -59,7 +59,7 @@
             "fieldPath": "userId",
             "columnName": "user_id",
             "affinity": "INTEGER",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "startTime",
@@ -272,7 +272,7 @@
       },
       {
         "tableName": "Gear",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gear_id` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, `description` TEXT, `gear_type` INTEGER, PRIMARY KEY(`gear_id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`gear_id` INTEGER NOT NULL, `user_id` INTEGER, `description` TEXT, `gear_type` INTEGER, PRIMARY KEY(`gear_id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -284,7 +284,7 @@
             "fieldPath": "userId",
             "columnName": "user_id",
             "affinity": "INTEGER",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "description",
@@ -329,7 +329,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '443290fb2cf2851ae0d278d95abbcbfb')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '72f83d5da0afd948d26c79a47a5b4fdf')"
     ]
   }
 }

@@ -14,6 +14,11 @@ Intended Functionality:
   * Track total days ridden in a season
 	
   * Display a variety of ski resorts that contain a link to their respective weather stats and trail maps.
+  
+My motivation for this app stems from my passion for snowboarding. Snowboarding has been my favorite get away to escape from the burdens of life and enjoy the tranquil environment of the mountain without having to worry about any responsibilities. This app is great for those who want to check the weather from different ski resorts 
+, log their days ridden in a given season, their total distance traveled while riding, and track the speed of the rider in real time. Whenever I check the weather, I have to search for each resort individually, or go to the website of the respective ski resort that I am researching, resulting in the process becoming quite cumbersome. This puts all of that information 
+into one convenient location for easy access.
+
 
 ## Intended users
 
@@ -24,6 +29,24 @@ Intended Functionality:
 * People who are interested in the ski resort stats and weather
 
     > As someone who can go skiing at multiple ski resorts, I want to be able to easily see each ski resorts weather forecast and status, so I can easily decide if I should go skiing that day, go to a different ski resort, or just cancel altogether.
+
+## [Summary of Current App State](app-summary.md)
+
+## [Wireframe](descriptions/sno-wireframe-description.md)
+
+## [Entity-relationship Diagram](descriptions/sno-erd-description.md)
+
+## [DDL](ddl.md)
+
+## [Technical Requirements & Dependencies](technical-dependencies.md)
+
+## [Javadocs](api/index.html)
+
+## [Copyrights & Licenses](notice.md)
+
+## [Build Instructions](https://github.com/anayadrian1/sno#build-instructions)
+
+## [Basic User Instructions](https://github.com/anayadrian1/sno#basic-user-instructions)
 
 ## Functionality
 
@@ -80,9 +103,3 @@ Intended Functionality:
 * Have a section for tips and tricks--tutorials for tricks, general riding, fundamentals to improving.
 
 * Save weather data for ski resorts to the server to see the latest weather report prior to going offline.
-
-## [Wireframe](descriptions/sno-wireframe-description.md)
-
-## [Entity-relationship Diagram](descriptions/sno-erd-description.md)
-
-## [DDL](ddl.md)

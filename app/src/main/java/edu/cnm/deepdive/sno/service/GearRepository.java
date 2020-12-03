@@ -5,21 +5,32 @@ import androidx.lifecycle.LiveData;
 import edu.cnm.deepdive.sno.model.dao.GearDao;
 import edu.cnm.deepdive.sno.model.entity.Gear;
 import edu.cnm.deepdive.sno.model.entity.Gear.GearType;
-import edu.cnm.deepdive.sno.model.entity.Trip;
 import io.reactivex.Completable;
 import java.util.List;
 
+/**
+ * Repository class to communicate with the {@link GearDao}.
+ */
 public class GearRepository {
 
   private final Context context;
   private final GearDao gearDao;
 
+  /**
+   * Constructs an instance of the gear repository.
+   * @param context Application context
+   */
   public GearRepository(Context context) {
     this.context = context;
     gearDao = SnoDatabase.getInstance().getGearDao();
   }
 
-  private Completable save(Gear gear) {
+  /**
+   * Saves a piece of gear in the database.
+   * @param gear A piece of gear
+   * @return A saved piece of gear.
+   */
+  public Completable save(Gear gear) {
     return (
         (gear.getId() == 0)
             ? gearDao.insert(gear)
@@ -33,7 +44,12 @@ public class GearRepository {
         .ignoreElement();
   }
 
-  private Completable delete(Gear gear) {
+  /**
+   * Deletes a piece of gear in the database.
+   * @param gear A piece of gear
+   * @return A deleted piece of gear.
+   */
+  public Completable delete(Gear gear) {
     return (
         gear.getId() != 0
             ? gearDao.delete(gear).ignoreElement()
@@ -41,15 +57,28 @@ public class GearRepository {
     );
   }
 
-  private LiveData<Gear> getGear(long gearId) {
+  /**
+   * Gets a single piece of gear from the database.
+   * @param gearId The id of the gear
+   * @return A single piece of gear.
+   */
+  public LiveData<Gear> getGear(long gearId) {
     return gearDao.getGear(gearId);
   }
 
-  private LiveData<List<Gear>> getAllGear() {
+  /**
+   * Returns all gear stored in the database
+   */
+  public LiveData<List<Gear>> getAllGear() {
     return gearDao.getAllGear();
   }
 
-  private LiveData<List<Gear>> getGearByType(GearType gearType) {
+  /**
+   * Returns a list of gear according to it's specific type according to {@link GearType}.
+   * @param gearType The specific type of gear.
+   * @return A list of gear by type.
+   */
+  public LiveData<List<Gear>> getGearByType(GearType gearType) {
     return gearDao.getGearByType(gearType);
   }
 }

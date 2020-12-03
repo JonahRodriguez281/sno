@@ -9,9 +9,10 @@ import androidx.room.Query;
 import androidx.room.Update;
 import edu.cnm.deepdive.sno.model.entity.User;
 import io.reactivex.Single;
-import java.util.Collection;
-import java.util.List;
 
+/**
+ * Data access object class to access data from the {@link User} entity.
+ */
 @Dao
 public interface UserDao {
 
