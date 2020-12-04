@@ -17,7 +17,6 @@ import edu.cnm.deepdive.sno.model.dao.TripDao;
 import edu.cnm.deepdive.sno.model.dao.UserDao;
 import edu.cnm.deepdive.sno.model.entity.FavoriteSkiResort;
 import edu.cnm.deepdive.sno.model.entity.Gear;
-import edu.cnm.deepdive.sno.model.entity.Gear.GearType;
 import edu.cnm.deepdive.sno.model.entity.SkiResort;
 import edu.cnm.deepdive.sno.model.entity.Trip;
 import edu.cnm.deepdive.sno.model.entity.User;
@@ -107,7 +106,7 @@ public abstract class SnoDatabase extends RoomDatabase {
       super.onCreate(db);
       insertSkiResorts();
       insertTrips();
-      insertGear();
+//      insertGear();
     }
 
     private void insertTrips() {
@@ -140,69 +139,22 @@ public abstract class SnoDatabase extends RoomDatabase {
 //      String[] goggles = {"Oakley Air Mail", "Oakley Line Miner", "Oakley Flight Deck"};
 //      String[] helmets = {"Smith MIPS Helmet", "Oakley MOD 3"};
 //      String[] snowboards = {"Travis Rice Pro", "GNU Head Space"};
-      List<Gear> gearList = new LinkedList<>();
-      Gear boots = new Gear();
-      boots.setDescription("Burton Photon Boa");
-      boots.setGearType(GearType.BOOTS);
-      gearList.add(boots);
-      Gear jacket = new Gear();
-      jacket.setDescription("Burton Covert Insulated Jacket");
-      jacket.setGearType(GearType.JACKET);
-      gearList.add(jacket);
-//      Gear pants = new Gear();
-//      pants.setDescription("Burton Covert Insulated Pants");
-//      pants.setGearType(GearType.PANTS);
-//      gearList.add(pants);
-//      Gear goggles = new Gear();
-//      goggles.setDescription("Oakley Air Mail");
-//      goggles.setGearType(GearType.GOGGLES);
-//      gearList.add(goggles);
-//      Gear helmet = new Gear();
-//      helmet.setDescription("Smith MIPS Helmet");
-//      helmet.setGearType(GearType.HELMET);
-//      gearList.add(helmet);
-//      Gear snowboard = new Gear();
-//      snowboard.setDescription("Travis Rice Pro Model");
-//      snowboard.setGearType(GearType.SNOWBOARD);
-//      gearList.add(snowboard);
-      SnoDatabase.getInstance().getGearDao().insert(gearList)
-          .subscribeOn(Schedulers.io())
-          .subscribe(
-              (ids) -> {
-              },
-              (throwable) -> Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable)
-          );
-//      for (String jacket : jackets) {
-//        Gear gear = new Gear();
-//        gear.setGearType(GearType.JACKET);
-//        gear.setDescription(jacket);
-//        gearList.add(gear);
-//      }
-//      for (String pant : pants) {
-//        Gear gear = new Gear();
-//        gear.setGearType(GearType.PANTS);
-//        gear.setDescription(pant);
-//        gearList.add(gear);
-//      }
-//      for (String goggle : goggles) {
-//        Gear gear = new Gear();
-//        gear.setGearType(GearType.GOGGLES);
-//        gear.setDescription(goggle);
-//        gearList.add(gear);
-//      }
-//      for (String helmet : helmets) {
-//        Gear gear = new Gear();
-//        gear.setGearType(GearType.HELMET);
-//        gear.setDescription(helmet);
-//        gearList.add(gear);
-//      }
-//      for (String snowboard : snowboards) {
-//        Gear gear = new Gear();
-//        gear.setGearType(GearType.SNOWBOARD);
-//        gear.setDescription(snowboard);
-//        gearList.add(gear);
-//      }
-
+//      List<Gear> gearList = new LinkedList<>();
+//      Gear boots = new Gear();
+//      boots.setDescription("Burton Photon Boa");
+//      boots.setGearType(GearType.BOOTS);
+//      gearList.add(boots);
+//      Gear jacket = new Gear();
+//      jacket.setDescription("Burton Covert Insulated Jacket");
+//      jacket.setGearType(GearType.JACKET);
+//      gearList.add(jacket);
+//      SnoDatabase.getInstance().getGearDao().insert(gearList)
+//          .subscribeOn(Schedulers.io())
+//          .subscribe(
+//              (ids) -> {
+//              },
+//              (throwable) -> Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable)
+//          );
     }
 
     private void insertSkiResorts() {

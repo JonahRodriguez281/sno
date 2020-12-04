@@ -30,24 +30,6 @@ into one convenient location for easy access.
 
     > As someone who can go skiing at multiple ski resorts, I want to be able to easily see each ski resorts weather forecast and status, so I can easily decide if I should go skiing that day, go to a different ski resort, or just cancel altogether.
 
-## [Summary of Current App State](app-summary.md)
-
-## [Wireframe](descriptions/sno-wireframe-description.md)
-
-## [Entity-relationship Diagram](descriptions/sno-erd-description.md)
-
-## [DDL](ddl.md)
-
-## [Technical Requirements & Dependencies](technical-dependencies.md)
-
-## [Javadocs](api/index.html)
-
-## [Copyrights & Licenses](notice.md)
-
-## [Build Instructions](https://github.com/anayadrian1/sno#build-instructions)
-
-## [Basic User Instructions](https://github.com/anayadrian1/sno#basic-user-instructions)
-
 ## Functionality
 
 * Users can create a profile that has a list of the users favorite/home ski resorts as well as seeing various stats, such as distance traveled and total days logged. They can also choose to log their gear in the app to catalogue.
@@ -74,32 +56,24 @@ into one convenient location for easy access.
 
   * Used by the app to track a max speed while riding. The app can function without this service.
 
-* Real Time Weather:
+* [OpenWeatherMap API](https://rapidapi.com/community/api/open-weather-map)
 
-    * [OpenWeatherMap API](https://rapidapi.com/community/api/open-weather-map)
-	
-	* [Weatherbit API](https://rapidapi.com/weatherbit/api/weather)
-	
-	  * Used to track the weather data pertaining to various ski resorts across the United States. The app can function without this service.
-	
-* Trail Map APIs:
-	
-	* [Trail API](https://rapidapi.com/trailapi/api/trailapi)
+  * Used by the app to track the weather for ski resorts.
+		
+## [Summary of Current App State](app-summary.md)
 
-	* [Ski Trail Map API](https://www.powderproject.com/data)
-	
-	  * Used to track trails for various ski resorts across the United States. The app is functional without this service.
+## [Wireframe](descriptions/sno-wireframe-description.md)
 
-* [Google Maps](https://cloud.google.com/maps-platform/products)
+## [Entity-relationship Diagram](descriptions/sno-erd-description.md)
 
-  * Potentially used to view the area surrounding the ski resorts in relation to the weather. The app is functional without the service.
+## [DDL](ddl.md)
 
-## Stretch goals/possible enhancements 
+## [Technical Requirements & Dependencies](technical-dependencies.md)
 
-* Real time gps tracking that tracks the users vertical feet and can post their stats to a leaderboard. The real time tracking can see what trails the user has taken and compare it to the trail map.
+## [Javadocs](api/index.html)
 
-* Have all ski resort stats to every ski resort in the USA, or even globally, and be able to see all necessary stats for that ski resort.
+## [Copyrights & Licenses](notice.md)
 
-* Have a section for tips and tricks--tutorials for tricks, general riding, fundamentals to improving.
+## [Build Instructions](https://github.com/anayadrian1/sno#build-instructions)
 
-* Save weather data for ski resorts to the server to see the latest weather report prior to going offline.
+## [Basic User Instructions](https://github.com/anayadrian1/sno#basic-user-instructions)

@@ -1,18 +1,18 @@
-Tested On:
+### Tested On:
 
   * Android API 29
   
   * Pixel 3a emulator
 
-Minimum Android API:
+### Minimum Android API:
 
   * 21
   
-Restrictions:
+### Restrictions:
 
   * No landscape layout
 
-Third Party Libraries:
+### Third Party Libraries:
 
   * Google Sign In
   
@@ -24,11 +24,11 @@ Third Party Libraries:
   
   * OkHttp
   
-Android Permission:
+### Android Permission:
   
   * Internet Permission (safe)
   
-External Services:
+### External Services:
 
   * Google Sign In
   
