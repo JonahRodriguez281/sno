@@ -10,11 +10,10 @@
 
 3. Execute the Build 
 
+    * **NOTE:** In order for the project to build, an API key must be stored outside the project in a properties file called sno.properties. Create a "services" directory at the 
+same level as the directory used to store your projects in. I will provide the sno.properties file in a link. Simply put the properties file in the service directory to import the API key.
+
     * Wait for the project to fully load and index the necessary files. Build the project if it has not so already by clicking on the "Build" tool window and selecting "Build Project" from the drop down menu. Run the application on the device of your choice by clicking on "Run" -> "Run 'Sno.app'". If there is no option to run the application, a configuration must be made. Select "Run" -> "Edit Configurations..." and click the + icon to add a new configuration. Select "Android App" and in the resulting window, under the "General" tab, select the "Module" dropdown and select "Sno.app". Select OK. 
-
-### NOTE:
-
-  * An API key is required for this project.
   
 ## Basic User Instructions:
 
